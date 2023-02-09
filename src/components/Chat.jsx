@@ -63,7 +63,7 @@ function Chat({ user }) {
                 >
                   <div
                     className={`p-4 rounded-xl max-w-md ${
-                      user.uid === message.uid ? "bg-blue-500" : "bg-white"
+                      user.uid === message.uid ? "bg-blue-400" : "bg-white"
                     }  flex-col flex space-y-2`}
                   >
                     <span

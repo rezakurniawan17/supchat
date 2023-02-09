@@ -8,13 +8,13 @@ import { useEffect, useState } from "react";
 
 function App() {
   const navigate = useNavigate();
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserData(user);
-      } else {
+      if (!user) {
         navigate("/login");
+      } else {
+        setUserData(user);
       }
     });
   }, []);
